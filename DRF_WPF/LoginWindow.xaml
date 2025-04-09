@@ -1,0 +1,177 @@
+<Window
+  x:Class="DRF_WPF.LoginWindow"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:local="clr-namespace:DRF_WPF"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  Title=""
+  Width="400"
+  Height="450"
+  AllowsTransparency="True"
+  MouseLeftButtonDown="Window_MouseLeftButtonDown"
+  ResizeMode="NoResize"
+  WindowStartupLocation="CenterScreen"
+  WindowStyle="None"
+  mc:Ignorable="d">
+
+  <Window.Background>
+    <SolidColorBrush Opacity="0" Color="White" />
+  </Window.Background>
+
+  <Border
+    Background="White"
+    BorderBrush="#E0E0E0"
+    BorderThickness="1"
+    CornerRadius="10">
+    <Border.Effect>
+      <DropShadowEffect
+        BlurRadius="15"
+        Opacity="0.2"
+        ShadowDepth="0"
+        Color="#CCCCCC" />
+    </Border.Effect>
+
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+
+      <!--  标题区域带显微镜图标  -->
+      <StackPanel Grid.Row="0" Margin="0,30,0,20">
+        <!--  医疗设备图标  -->
+        <Image
+          Width="80"
+          Height="80"
+          HorizontalAlignment="Center"
+          Source="{StaticResource LoginIcon}"
+          Stretch="Uniform" />
+
+        <TextBlock
+          Margin="0,15,0,0"
+          HorizontalAlignment="Center"
+          FontSize="24"
+          FontWeight="Medium"
+          Foreground="#333333"
+          Text="LOGIN" />
+      </StackPanel>
+
+      <!--  登录表单  -->
+      <StackPanel Grid.Row="1" Margin="40,10,40,40">
+        <Border
+          Margin="0,0,0,20"
+          Background="#F5F5F5"
+          CornerRadius="5">
+          <Grid>
+            <TextBox
+              x:Name="tbUsername"
+              Height="45"
+              Padding="15,0"
+              VerticalAlignment="Center"
+              VerticalContentAlignment="Center"
+              Background="Transparent"
+              BorderThickness="0"
+              FontSize="14" />
+            <TextBlock
+              Margin="15,0,0,0"
+              VerticalAlignment="Center"
+              Foreground="#999999"
+              IsHitTestVisible="False"
+              Text="用户名">
+              <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                  <Style.Triggers>
+                    <DataTrigger Binding="{Binding ElementName=tbUsername, Path=Text}" Value="">
+                      <Setter Property="Visibility" Value="Visible" />
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding ElementName=tbUsername, Path=IsFocused}" Value="True">
+                      <Setter Property="Visibility" Value="Collapsed" />
+                    </DataTrigger>
+                  </Style.Triggers>
+                </Style>
+              </TextBlock.Style>
+            </TextBlock>
+          </Grid>
+        </Border>
+
+        <Border
+          Margin="0,0,0,25"
+          Background="#F5F5F5"
+          CornerRadius="5">
+          <Grid>
+            <PasswordBox
+              x:Name="pbPasswordBox"
+              Height="45"
+              Padding="15,0"
+              VerticalAlignment="Center"
+              VerticalContentAlignment="Center"
+              Background="Transparent"
+              BorderThickness="0"
+              FontSize="14" />
+            <TextBlock
+              Margin="15,0,0,0"
+              VerticalAlignment="Center"
+              Foreground="#999999"
+              IsHitTestVisible="False"
+              Text="密码">
+              <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                  <Style.Triggers>
+                    <DataTrigger Binding="{Binding ElementName=pbPasswordBox, Path=Password, Mode=OneWay}" Value="">
+                      <Setter Property="Visibility" Value="Visible" />
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding ElementName=pbPasswordBox, Path=IsFocused}" Value="True">
+                      <Setter Property="Visibility" Value="Collapsed" />
+                    </DataTrigger>
+                  </Style.Triggers>
+                </Style>
+              </TextBlock.Style>
+            </TextBlock>
+          </Grid>
+        </Border>
+
+        <TextBlock
+          x:Name="ErrorMessageText"
+          Margin="0,0,0,20"
+          HorizontalAlignment="Center"
+          FontSize="12"
+          Foreground="#FF4444"
+          TextWrapping="Wrap"
+          Visibility="Collapsed" />
+
+        <Button
+          x:Name="LoginButton"
+          Height="45"
+          Background="#007ACC"
+          BorderThickness="0"
+          Click="LoginButton_Click"
+          Content="登 录"
+          FontSize="16"
+          Foreground="White">
+          <Button.Style>
+            <Style TargetType="Button">
+              <Setter Property="Template">
+                <Setter.Value>
+                  <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="5">
+                      <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                      <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#0066CC" />
+                      </Trigger>
+                      <Trigger Property="IsPressed" Value="True">
+                        <Setter Property="Background" Value="#005BB9" />
+                      </Trigger>
+                    </ControlTemplate.Triggers>
+                  </ControlTemplate>
+                </Setter.Value>
+              </Setter>
+            </Style>
+          </Button.Style>
+        </Button>
+      </StackPanel>
+    </Grid>
+  </Border>
+</Window> 

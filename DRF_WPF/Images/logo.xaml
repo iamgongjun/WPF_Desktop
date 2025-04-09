@@ -1,0 +1,45 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DrawingImage x:Key="LogoImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup>
+                <GeometryDrawing Brush="#E73C3C">
+                    <GeometryDrawing.Geometry>
+                        <RectangleGeometry Rect="0,0,100,100" />
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+                <GeometryDrawing Brush="White">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry>
+                            <PathGeometry.Figures>
+                                <PathFigure StartPoint="20,50">
+                                    <PathFigure.Segments>
+                                        <LineSegment Point="30,30" />
+                                        <LineSegment Point="40,60" />
+                                        <LineSegment Point="50,20" />
+                                        <LineSegment Point="60,50" />
+                                        <LineSegment Point="70,40" />
+                                        <LineSegment Point="80,70" />
+                                        <LineSegment Point="80,80" />
+                                        <LineSegment Point="20,80" />
+                                        <LineSegment Point="20,50" />
+                                    </PathFigure.Segments>
+                                </PathFigure>
+                            </PathGeometry.Figures>
+                        </PathGeometry>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+                <GeometryDrawing Brush="White">
+                    <GeometryDrawing.Geometry>
+                        <EllipseGeometry Center="35,30" RadiusX="5" RadiusY="5" />
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+                <GeometryDrawing Brush="White">
+                    <GeometryDrawing.Geometry>
+                        <EllipseGeometry Center="65,40" RadiusX="5" RadiusY="5" />
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+</ResourceDictionary> 

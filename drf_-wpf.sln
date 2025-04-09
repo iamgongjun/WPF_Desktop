@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DRF_WPF", "DRF_WPF\DRF_WPF.csproj", "{C5262E23-5225-3DDD-D4AC-4161DF69DADE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5262E23-5225-3DDD-D4AC-4161DF69DADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5262E23-5225-3DDD-D4AC-4161DF69DADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5262E23-5225-3DDD-D4AC-4161DF69DADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5262E23-5225-3DDD-D4AC-4161DF69DADE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4DF1144-6F31-495E-95AF-F9A165D5723A}
+	EndGlobalSection
+EndGlobal
